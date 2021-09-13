@@ -50,13 +50,12 @@
           </div>
           <div class="header__top_center"><span>Ежедневно с 9:00 до 20:00</span></div>
           <div class="header__top_right"><a class="item" href="mailto:info@sagrande.ru"><span>info@sagrande.ru</span></a><a class="item" href="tel:79457803300"> <span>+7 945 780-33-00</span></a>
-            <button class="item item_modal" type="button"><span>Заказать звонок</span></button>
+            <button class="item item_modal modal_call_active" type="button"><span>Заказать звонок</span></button>
           </div>
         </div>
       </div>
       <div class="header__bottom">
-        <div class="container">
-          <div class="header__bottom_logo"><img src="./img/logo_text.svg" alt="logo"></div>
+        <div class="container"><a class="header__bottom_logo" href="#"><img src="./img/logo_text.svg" alt="logo"></a>
           <div class="header__bottom_links">
             <button class="locale_select" type="button">
               <div class="icon"><svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,8 +125,8 @@
         </div>
         <div class="bottom">
           <div class="container">
-            <div class="bottom__tab active"><a class="item" href="#"><img src="./img/drop_menu/2_1.jpg" alt="image"><span>Кабинеты руководителя</span></a><a class="item" href="#"><img src="./img/drop_menu/2_2.jpg" alt="image"><span>Столы для переговоров (конференцстолы)</span></a></div>
-            <div class="bottom__tab"><a class="item" href="#"><img src="./img/drop_menu/3_1.jpg" alt="image"><span>Гостиные</span></a><a class="item" href="#"><img src="./img/drop_menu/3_2.jpg" alt="image"><span>Тумбы из массива</span></a><a class="item" href="#"><img src="./img/drop_menu/3_3.jpg" alt="image"><span>Бюро из массива</span></a><a class="item" href="#"><img src="./img/drop_menu/3_4.jpg" alt="image"><span>Столовая группа</span></a><a class="item" href="#"><img src="./img/drop_menu/3_5.jpg" alt="image"><span>Мебель для спальни</span></a></div>
+            <div class="bottom__tab active"><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/2_1.jpg" src="#" alt="image"><span>Кабинеты руководителя</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/2_2.jpg" src="#" alt="image"><span>Столы для переговоров (конференцстолы)</span></a></div>
+            <div class="bottom__tab"><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_1.jpg" src="#" alt="image"><span>Гостиные</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_2.jpg" src="#" alt="image"><span>Тумбы из массива</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_3.jpg" src="#" alt="image"><span>Бюро из массива</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_4.jpg" src="#" alt="image"><span>Столовая группа</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_5.jpg" src="#" alt="image"><span>Мебель для спальни</span></a></div>
           </div>
         </div>
       </div>
@@ -142,43 +141,294 @@
         <h1 class="title">Кухни на заказ</h1>
         <div class="catalog__filter">
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Стиль:</span><span class="right">Премиум</span></button>
+            <button class="catalog__filter_item__button" type="button"><span class="left">Стиль:</span><span class="right">Премиум</span></button>
+            <div class="catalog__filter_item__drop">
+              <ul>
+                <li class="active">
+                  <button type="button">Премиум</button>
+                </li>
+                <li>
+                  <button type="button">Элитные</button>
+                </li>
+                <li>
+                  <button type="button">Классика</button>
+                </li>
+                <li>
+                  <button type="button">Современные</button>
+                </li>
+                <li>
+                  <button type="button">Стильные</button>
+                </li>
+                <li>
+                  <button type="button">Минимализм</button>
+                </li>
+                <li>
+                  <button type="button">Студия</button>
+                </li>
+                <li>
+                  <button type="button">Италия</button>
+                </li>
+                <li>
+                  <button type="button">Дизайнерские</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Форма:</span><span class="right">
+            <button class="catalog__filter_item__button" type="button"><span class="left">Форма:</span><span class="right">
                 Выбрать<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 0.5L4 3.5L7 0.5" stroke="#5C5C5C"/>
 </svg></span></button>
+            <div class="catalog__filter_item__drop">
+              <ul>
+                <li>
+                  <button type="button">Островные</button>
+                </li>
+                <li>
+                  <button type="button">П-образные кухни</button>
+                </li>
+                <li>
+                  <button type="button">Угловые</button>
+                </li>
+                <li>
+                  <button type="button">Компактные</button>
+                </li>
+                <li>
+                  <button type="button">Прямые</button>
+                </li>
+                <li>
+                  <button type="button">Встраиваемые</button>
+                </li>
+                <li>
+                  <button type="button">Открытые</button>
+                </li>
+                <li>
+                  <button type="button">С барной стойкой</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Размер:</span><span class="right">
+            <button class="catalog__filter_item__button" type="button"><span class="left">Размер:</span><span class="right">
                 Выбрать<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 0.5L4 3.5L7 0.5" stroke="#5C5C5C"/>
 </svg></span></button>
+            <div class="catalog__filter_item__drop">
+              <ul>
+                <li>
+                  <button type="button">Высокие</button>
+                </li>
+                <li>
+                  <button type="button">Большие</button>
+                </li>
+                <li>
+                  <button type="button">Длинная</button>
+                </li>
+                <li>
+                  <button type="button">Короткие</button>
+                </li>
+                <li>
+                  <button type="button">Небольшие</button>
+                </li>
+                <li>
+                  <button type="button">Модульная</button>
+                </li>
+                <li>
+                  <button type="button">Маленькие</button>
+                </li>
+                <li>
+                  <button type="button">Узкая</button>
+                </li>
+                <li>
+                  <button type="button">Мини</button>
+                </li>
+                <li>
+                  <button type="button">Низкие</button>
+                </li>
+                <li>
+                  <button type="button">По индивидуальным размерам</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Цвет:</span><span class="right">
+            <button class="catalog__filter_item__button" type="button"><span class="left">Цвет:</span><span class="right">
                 Выбрать<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 0.5L4 3.5L7 0.5" stroke="#5C5C5C"/>
 </svg></span></button>
+            <div class="catalog__filter_item__drop col2">
+              <ul>
+                <li>
+                  <button type="button">Беленый дуб</button>
+                </li>
+                <li>
+                  <button type="button">Полуматовая</button>
+                </li>
+                <li>
+                  <button type="button">Голубые</button>
+                </li>
+                <li>
+                  <button type="button">Матовая</button>
+                </li>
+                <li>
+                  <button type="button">Серая</button>
+                </li>
+                <li>
+                  <button type="button">Матовые</button>
+                </li>
+                <li>
+                  <button type="button">Белая</button>
+                </li>
+                <li>
+                  <button type="button">Красивые</button>
+                </li>
+                <li>
+                  <button type="button">Светлые с патиной</button>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <button type="button">Светлая</button>
+                </li>
+                <li>
+                  <button type="button">Бежевые</button>
+                </li>
+                <li>
+                  <button type="button">Глянцевые</button>
+                </li>
+                <li>
+                  <button type="button">Шелковисто-матовые</button>
+                </li>
+                <li>
+                  <button type="button">Слоновая кость</button>
+                </li>
+                <li>
+                  <button type="button">Темные</button>
+                </li>
+                <li>
+                  <button type="button">Коричневые</button>
+                </li>
+                <li>
+                  <button type="button">Цвета орех</button>
+                </li>
+                <li>
+                  <button type="button">Прозрачный лак</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Цена:</span><span class="right">
+            <button class="catalog__filter_item__button" type="button"><span class="left">Цена:</span><span class="right">
                 Выбрать<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 0.5L4 3.5L7 0.5" stroke="#5C5C5C"/>
 </svg></span></button>
+            <div class="catalog__filter_item__drop">
+              <ul>
+                <li>
+                  <button type="button">Элитные от 25 000 евро</button>
+                </li>
+                <li>
+                  <button type="button">Дорогие от 15 000 до 25 000 евро</button>
+                </li>
+                <li>
+                  <button type="button">Доступные до 15 000 евро</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Материал:</span><span class="right">
+            <button class="catalog__filter_item__button" type="button"><span class="left">Материал:</span><span class="right">
                 Выбрать<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 0.5L4 3.5L7 0.5" stroke="#5C5C5C"/>
 </svg></span></button>
+            <div class="catalog__filter_item__drop">
+              <ul>
+                <li>
+                  <button type="button">Массив ясеня</button>
+                </li>
+                <li>
+                  <button type="button">Массив бука</button>
+                </li>
+                <li>
+                  <button type="button">Массив клена</button>
+                </li>
+                <li>
+                  <button type="button">Акрил</button>
+                </li>
+                <li>
+                  <button type="button">Шпон дуба</button>
+                </li>
+                <li>
+                  <button type="button">Шпон клена</button>
+                </li>
+                <li>
+                  <button type="button">Массив дуба</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="catalog__filter_item">
-            <button type="button"><span class="left">Элементы:</span><span class="right">
+            <button class="catalog__filter_item__button" type="button"><span class="left">Элементы:</span><span class="right">
                 Выбрать<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 0.5L4 3.5L7 0.5" stroke="#5C5C5C"/>
 </svg></span></button>
+            <div class="catalog__filter_item__drop col2">
+              <ul>
+                <li>
+                  <button type="button">Серебряная патина</button>
+                </li>
+                <li>
+                  <button type="button">Золотая поталь</button>
+                </li>
+                <li>
+                  <button type="button">Серебряная поталь</button>
+                </li>
+                <li>
+                  <button type="button">С вытяжкой</button>
+                </li>
+                <li>
+                  <button type="button">Резной</button>
+                </li>
+                <li>
+                  <button type="button">Металлические накладки</button>
+                </li>
+                <li>
+                  <button type="button">Деревянная накладка</button>
+                </li>
+                <li>
+                  <button type="button">Эмаль</button>
+                </li>
+                <li>
+                  <button type="button">Резной молдинг</button>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <button type="button">Деревянный декор</button>
+                </li>
+                <li>
+                  <button type="button">Резной декор</button>
+                </li>
+                <li>
+                  <button type="button">С патиной</button>
+                </li>
+                <li>
+                  <button type="button">С карнизом</button>
+                </li>
+                <li>
+                  <button type="button">Французская решетка</button>
+                </li>
+                <li>
+                  <button type="button">Деревянная вытяжка</button>
+                </li>
+                <li>
+                  <button type="button">Резные колонны</button>
+                </li>
+                <li>
+                  <button type="button">Классический портал</button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="catalog__count"><span>Товаров на странице: </span>
@@ -187,7 +437,7 @@
         </div>
         <div class="catalog__product">
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item2.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item2.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -204,7 +454,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item12.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item12.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -221,7 +471,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item13.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item13.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -238,7 +488,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item14.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item14.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -255,7 +505,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item15.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item15.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -272,7 +522,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item16.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item16.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -289,7 +539,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item17.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item17.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -306,7 +556,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item18.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item18.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -323,7 +573,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item19.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item19.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -340,7 +590,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item20.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item20.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -357,7 +607,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item21.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item21.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -374,7 +624,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item22.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item22.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -391,7 +641,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item23.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item23.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -408,7 +658,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item24.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item24.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -425,7 +675,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item25.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item25.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -442,7 +692,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item26.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item26.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -459,7 +709,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item27.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item27.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -476,7 +726,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item28.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item28.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -493,7 +743,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item29.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item29.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -510,7 +760,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item30.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item30.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -527,7 +777,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item31.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item31.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -544,7 +794,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item32.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item32.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -561,7 +811,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item33.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item33.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -578,7 +828,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item34.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item34.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -595,7 +845,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item35.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item35.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -612,7 +862,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item36.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item36.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -629,7 +879,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item37.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item37.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -646,7 +896,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item38.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item38.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -663,7 +913,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item39.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item39.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -680,7 +930,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item40.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item40.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -697,7 +947,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item2.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item2.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -714,7 +964,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item12.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item12.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -731,7 +981,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item13.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item13.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -748,7 +998,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item14.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item14.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -765,7 +1015,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item15.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item15.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -782,7 +1032,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item16.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item16.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -799,7 +1049,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item17.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item17.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -816,7 +1066,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item18.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item18.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -833,7 +1083,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item19.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item19.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -850,7 +1100,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item20.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item20.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -867,7 +1117,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item21.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item21.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -884,7 +1134,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item22.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item22.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -901,7 +1151,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item23.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item23.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -918,7 +1168,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item24.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item24.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -935,7 +1185,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item25.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item25.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -952,7 +1202,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item26.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item26.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -969,7 +1219,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item27.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item27.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -986,7 +1236,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item28.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item28.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1003,7 +1253,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item29.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item29.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1020,7 +1270,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item30.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item30.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1037,7 +1287,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item31.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item31.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1054,7 +1304,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item32.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item32.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1071,7 +1321,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item33.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item33.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1088,7 +1338,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item34.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item34.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1105,7 +1355,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item35.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item35.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1122,7 +1372,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item36.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item36.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1139,7 +1389,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item37.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item37.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1156,7 +1406,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item38.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item38.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1173,7 +1423,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item39.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item39.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1190,7 +1440,7 @@
             </div>
           </div>
           <div class="product_item">
-            <div class="product_item__image"> <img src="./img/products/item40.jpg" alt="image"></div>
+            <div class="product_item__image"> <img class="lazyload" data-src="./img/products/item40.jpg" src="#" alt="image"></div>
             <div class="product_item__title">Кухня Alessandria patina due из массива бука</div>
             <div class="product_item__subtitle">Цена от <b>150 000 руб.</b> за пог. м</div>
             <div class="product_item__list">
@@ -1229,7 +1479,7 @@
           <p class="text">В соответствии с законом Ципфа, общество потребления повсеместно трансформирует стратегический маркетинг. Точечное воздействие упорядочивает связанный нишевый проект. До недавнего времени считалось, что промоакция неоднозначна. Точечное воздействие, следовательно, недостижимо. Отсюда естественно следует, что раскрутка существенно охватывает рекламный клаттер.</p>
           <p class="text">Медиамикс экономит медиабизнес. Рейтинг спорадически создает формат события. Особенность рекламы, конечно, восстанавливает поведенческий таргетинг. Производство исключительно отражает продвигаемый потребительский рынок.В соответствии с законом Ципфа, общество потребления повсеместно трансформирует стратегический маркетинг. Точечное воздействие упорядочивает связанный нишевый проект. До недавнего времени считалось, что промоакция неоднозначна. Точечное воздействие, следовательно, недостижимо. Отсюда естественно следует, что раскрутка существенно охватывает рекламный клаттер.</p>
           <p class="text">Медиамикс экономит медиабизнес. Рейтинг спорадически создает формат события. Особенность рекламы, конечно, восстанавливает поведенческий таргетинг. Производство исключительно отражает продвигаемый потребительский рынок.</p>
-          <button class="button_hide" type="button"><span>Скрыть</span><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="button_hide" type="button"><span><span class="tt">Скрыть</span></span><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.5 6L6 1.5L10.5 6" stroke="#3E3E3E" stroke-width="2"/>
 </svg>
           </button>
@@ -1241,7 +1491,7 @@
               <div class="title">Понравились проекты? Закажите уникальную мебель онлайн и узнайте её стоимость.</div>
               <form class="form_wrap" action="/">
                 <div class="form_wrap__line">
-                  <input class="field mask--phone" type="text" name="phone" placeholder="+7 9... ... .. ..">
+                  <input class="field mask--phone" type="text" name="phone" placeholder="+7 9... ... .. .." required>
                   <button class="button" type="submit"><span>получить расчёт</span></button>
                 </div>
                 <div class="form_wrap__line">
@@ -1251,7 +1501,7 @@
                 </div>
               </form>
             </div>
-            <div class="right"><img src="./img/bg_message_right.jpg" alt="image"></div>
+            <div class="right"><img class="lazyload" data-src="./img/bg_message_right.jpg" src="#" alt="image"></div>
           </div>
         </section>
       </div>
@@ -1326,12 +1576,104 @@
         </div>
         <div class="footer__bottom">
           <p class="text">© 2021 Мебельная компания «Sagrande mobili» Дизайнерские кухни премиум класса на заказ от производителя</p><a class="link" href="#">Политика конфиденциальности</a>
-          <div class="footer__bottom_right"><a href="#">Разработка сайта <img src="./img/wigos.png" alt="image"></a></div>
+          <div class="footer__bottom_right"><a href="#">Разработка сайта <img class="lazyload" data-src="./img/wigos.png" src="#" alt="image"></a></div>
         </div>
       </div>
     </footer>
+    <div class="modal_content modal_change_city" id="modal_change_locale">
+      <div class="modal_content__wrap" data-simplebar>
+        <div class="modal_content__header"><b class="title">Ваш город</b>
+          <button class="modal_close" type="button"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L14 14" stroke="black"/>
+<path d="M14 1L1 14" stroke="black"/>
+</svg>
+          </button>
+        </div>
+        <div class="modal_content__box" data-simplebar>
+          <div class="smart_menu__header-locale"><svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4166 7.40225C14.4166 11.0682 7.99992 17.3576 7.99992 17.3576C7.99992 17.3576 1.58325 11.0682 1.58325 7.40225C1.58325 3.73722 4.45609 0.765381 7.99992 0.765381C11.5438 0.765381 14.4166 3.73722 14.4166 7.40225Z" stroke="#FFB571" stroke-width="1.375"/>
+<path d="M7.99992 8.13972C8.24303 8.13972 8.47619 8.0426 8.6481 7.86973C8.82001 7.69686 8.91658 7.4624 8.91658 7.21793C8.91658 6.97346 8.82001 6.739 8.6481 6.56613C8.47619 6.39326 8.24303 6.29614 7.99992 6.29614C7.7568 6.29614 7.52365 6.39326 7.35174 6.56613C7.17983 6.739 7.08325 6.97346 7.08325 7.21793C7.08325 7.4624 7.17983 7.69686 7.35174 7.86973C7.52365 8.0426 7.7568 8.13972 7.99992 8.13972Z" fill="#FFB571" stroke="#FFB571" stroke-width="1.375" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span class="text">Тверь</span>
+          </div><b class="title">Выбрать другой город</b>
+          <input class="field" type="text" placeholder="Поиск города">
+          <div class="list_checked">
+            <label class="list_checked__item">
+              <input type="radio" name="radio1" checked>
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Тверь</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Москва</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Краснодар</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Сочи</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Санкт-Петербург</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Тверь</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Москва</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Краснодар</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Сочи</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Санкт-Петербург</b>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./libs/lazysizes/lazysizes.min.js" defer></script>
     <script src="./libs/imask/imask.js" defer></script>
+    <script src="./libs/simplebar/simplebar.min.js" defer></script>
     <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/common.js" defer></script>
   </body>

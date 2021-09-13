@@ -1,0 +1,32 @@
+<svg width="162" height="82" viewBox="0 0 162 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.21" d="M21 0H143L129.5 20.5H31.5L21 0Z" fill="#BEBEBE"/>
+<rect opacity="0.21" width="113" height="13" transform="matrix(-1 0 0 1 131 20)" fill="#C4C9CC"/>
+<rect opacity="0.21" width="49" height="13" transform="matrix(4.37114e-08 1 1 -4.37114e-08 18 33)" fill="#C4C9CC"/>
+<path opacity="0.21" d="M99.5 20L100 22L105 11L103.5 0H99.5V20Z" fill="#BEBEBE"/>
+<rect opacity="0.21" width="43" height="14" transform="matrix(-1 0 0 1 146 0)" fill="#BEBEBE"/>
+<path opacity="0.21" d="M64.5 20L64 22L59 11L60.5 0H64.5V20Z" fill="#BEBEBE"/>
+<rect opacity="0.21" width="62" height="14" transform="matrix(-1 0 0 1 62 0)" fill="#BEBEBE"/>
+<rect opacity="0.21" width="41" height="16" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 14)" fill="#BEBEBE"/>
+<rect opacity="0.21" width="98" height="1" transform="matrix(-1 0 0 1 130 33)" fill="#BEBEBE"/>
+<rect opacity="0.21" width="49" height="0.999998" transform="matrix(4.37114e-08 1 1 -4.37114e-08 31 33)" fill="#BEBEBE"/>
+<path opacity="0.21" d="M130 34H32L35 39H127L130 34Z" fill="#BEBEBE"/>
+<path opacity="0.21" d="M32 34L32 82L37 80.5306L37 35.4694L32 34Z" fill="#BEBEBE"/>
+<rect opacity="0.21" width="19" height="15" rx="2" transform="matrix(-1 0 0 1 90 17)" fill="#BEBEBE"/>
+<rect opacity="0.21" width="17" height="13" rx="2" transform="matrix(-1 0 0 1 89 18)" fill="#BEBEBE"/>
+<path opacity="0.21" d="M144 14H103L100 22H141.471L144 14Z" fill="#BEBEBE"/>
+<path opacity="0.21" d="M21 14H62L64 22H23.5287L21 14Z" fill="#BEBEBE"/>
+<path opacity="0.21" d="M16 55L16 14L24 14L24 52.4713L16 55Z" fill="#BEBEBE"/>
+<circle opacity="0.21" r="1.5" transform="matrix(-1 0 0 1 84 22)" stroke="#BEBEBE"/>
+<circle opacity="0.21" r="1.5" transform="matrix(-1 0 0 1 78 22)" stroke="#BEBEBE"/>
+<circle opacity="0.21" r="1.5" transform="matrix(-1 0 0 1 78 27)" stroke="#BEBEBE"/>
+<circle opacity="0.21" r="1.5" transform="matrix(-1 0 0 1 84 27)" stroke="#BEBEBE"/>
+<path opacity="0.21" d="M44 22L41 14V0" stroke="#BEBEBE"/>
+<path opacity="0.21" d="M24 37L15.2727 34L0 34" stroke="#BEBEBE"/>
+<rect x="144" y="18" width="64" height="13" transform="rotate(90 144 18)" fill="#C4C9CC"/>
+<rect x="162" width="55" height="16" transform="rotate(90 162 0)" fill="#383E42"/>
+<rect x="131" y="18" width="64" height="0.999997" transform="rotate(90 131 18)" fill="#A3BAB8"/>
+<path d="M130 18L130 82L125 80.0408L125 19.9592L130 18Z" fill="#859BA5"/>
+<path d="M146 55L146 0L138 -9.53991e-08L138 51.6078L146 55Z" fill="#919191"/>
+<path opacity="0.2" d="M121 22L124 14V0" stroke="#636363"/>
+<path d="M138 37L146.727 34L162 34" stroke="#636363"/>
+</svg>

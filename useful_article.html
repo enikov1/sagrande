@@ -50,13 +50,12 @@
           </div>
           <div class="header__top_center"><span>Ежедневно с 9:00 до 20:00</span></div>
           <div class="header__top_right"><a class="item" href="mailto:info@sagrande.ru"><span>info@sagrande.ru</span></a><a class="item" href="tel:79457803300"> <span>+7 945 780-33-00</span></a>
-            <button class="item item_modal" type="button"><span>Заказать звонок</span></button>
+            <button class="item item_modal modal_call_active" type="button"><span>Заказать звонок</span></button>
           </div>
         </div>
       </div>
       <div class="header__bottom">
-        <div class="container">
-          <div class="header__bottom_logo"><img src="./img/logo_text.svg" alt="logo"></div>
+        <div class="container"><a class="header__bottom_logo" href="#"><img src="./img/logo_text.svg" alt="logo"></a>
           <div class="header__bottom_links">
             <button class="locale_select" type="button">
               <div class="icon"><svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,8 +125,8 @@
         </div>
         <div class="bottom">
           <div class="container">
-            <div class="bottom__tab active"><a class="item" href="#"><img src="./img/drop_menu/2_1.jpg" alt="image"><span>Кабинеты руководителя</span></a><a class="item" href="#"><img src="./img/drop_menu/2_2.jpg" alt="image"><span>Столы для переговоров (конференцстолы)</span></a></div>
-            <div class="bottom__tab"><a class="item" href="#"><img src="./img/drop_menu/3_1.jpg" alt="image"><span>Гостиные</span></a><a class="item" href="#"><img src="./img/drop_menu/3_2.jpg" alt="image"><span>Тумбы из массива</span></a><a class="item" href="#"><img src="./img/drop_menu/3_3.jpg" alt="image"><span>Бюро из массива</span></a><a class="item" href="#"><img src="./img/drop_menu/3_4.jpg" alt="image"><span>Столовая группа</span></a><a class="item" href="#"><img src="./img/drop_menu/3_5.jpg" alt="image"><span>Мебель для спальни</span></a></div>
+            <div class="bottom__tab active"><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/2_1.jpg" src="#" alt="image"><span>Кабинеты руководителя</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/2_2.jpg" src="#" alt="image"><span>Столы для переговоров (конференцстолы)</span></a></div>
+            <div class="bottom__tab"><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_1.jpg" src="#" alt="image"><span>Гостиные</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_2.jpg" src="#" alt="image"><span>Тумбы из массива</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_3.jpg" src="#" alt="image"><span>Бюро из массива</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_4.jpg" src="#" alt="image"><span>Столовая группа</span></a><a class="item" href="#"><img class="lazyload" data-src="./img/drop_menu/3_5.jpg" src="#" alt="image"><span>Мебель для спальни</span></a></div>
           </div>
         </div>
       </div>
@@ -293,12 +292,104 @@
         </div>
         <div class="footer__bottom">
           <p class="text">© 2021 Мебельная компания «Sagrande mobili» Дизайнерские кухни премиум класса на заказ от производителя</p><a class="link" href="#">Политика конфиденциальности</a>
-          <div class="footer__bottom_right"><a href="#">Разработка сайта <img src="./img/wigos.png" alt="image"></a></div>
+          <div class="footer__bottom_right"><a href="#">Разработка сайта <img class="lazyload" data-src="./img/wigos.png" src="#" alt="image"></a></div>
         </div>
       </div>
     </footer>
+    <div class="modal_content modal_change_city" id="modal_change_locale">
+      <div class="modal_content__wrap" data-simplebar>
+        <div class="modal_content__header"><b class="title">Ваш город</b>
+          <button class="modal_close" type="button"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L14 14" stroke="black"/>
+<path d="M14 1L1 14" stroke="black"/>
+</svg>
+          </button>
+        </div>
+        <div class="modal_content__box" data-simplebar>
+          <div class="smart_menu__header-locale"><svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.4166 7.40225C14.4166 11.0682 7.99992 17.3576 7.99992 17.3576C7.99992 17.3576 1.58325 11.0682 1.58325 7.40225C1.58325 3.73722 4.45609 0.765381 7.99992 0.765381C11.5438 0.765381 14.4166 3.73722 14.4166 7.40225Z" stroke="#FFB571" stroke-width="1.375"/>
+<path d="M7.99992 8.13972C8.24303 8.13972 8.47619 8.0426 8.6481 7.86973C8.82001 7.69686 8.91658 7.4624 8.91658 7.21793C8.91658 6.97346 8.82001 6.739 8.6481 6.56613C8.47619 6.39326 8.24303 6.29614 7.99992 6.29614C7.7568 6.29614 7.52365 6.39326 7.35174 6.56613C7.17983 6.739 7.08325 6.97346 7.08325 7.21793C7.08325 7.4624 7.17983 7.69686 7.35174 7.86973C7.52365 8.0426 7.7568 8.13972 7.99992 8.13972Z" fill="#FFB571" stroke="#FFB571" stroke-width="1.375" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span class="text">Тверь</span>
+          </div><b class="title">Выбрать другой город</b>
+          <input class="field" type="text" placeholder="Поиск города">
+          <div class="list_checked">
+            <label class="list_checked__item">
+              <input type="radio" name="radio1" checked>
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Тверь</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Москва</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Краснодар</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Сочи</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Санкт-Петербург</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Тверь</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Москва</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Краснодар</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Сочи</b>
+            </label>
+            <label class="list_checked__item">
+              <input type="radio" name="radio1">
+              <div class="check"><svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 3L5.5 7.5L12 1" stroke="#FFB571"/>
+</svg>
+              </div><b>Санкт-Петербург</b>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./libs/lazysizes/lazysizes.min.js" defer></script>
     <script src="./libs/imask/imask.js" defer></script>
+    <script src="./libs/simplebar/simplebar.min.js" defer></script>
     <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/common.js" defer></script>
   </body>

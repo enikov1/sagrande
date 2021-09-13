@@ -114,7 +114,219 @@ if(accordion_item) {
 }
 
 
+// catalog filter
+
+const catalog_filter_item = document.querySelectorAll('.catalog__filter_item')
+
+if(catalog_filter_item) {
+	catalog_filter_item.forEach(item => {
+		const button = item.querySelector('.catalog__filter_item__button')
+		const selected_text = item.querySelector('.catalog__filter_item__button .right')
+		const drop_menu = item.querySelector('.catalog__filter_item__drop')
+		
+
+		button.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			for (let i of item.parentNode.children) {
+				i.classList.remove('active')
+			}
+
+			item.classList.toggle('active')
+		})
+
+		if(drop_menu) {
+			const drop_menu_button = drop_menu.querySelectorAll('button')
+			drop_menu_button.forEach(e => {
+				e.addEventListener('click', function(event) {
+					event.preventDefault()
+
+					for (let item of this.parentNode.parentNode.children) {
+						item.classList.remove('active')
+					}
+
+					this.parentNode.classList.add('active')
+
+					item.classList.remove('active')
+					selected_text.innerHTML = this.innerHTML
+				})
+			})
+		}
+		
+	})
+}
+
+// text block hide
+
+const block_text_hide = document.querySelector('.block_text_hide')
+
+if(block_text_hide) {
+	const button = block_text_hide.querySelector('.button_hide')
+
+	button.addEventListener('click', function(event) {
+		event.preventDefault()
+
+		block_text_hide.classList.toggle('hide')
+	})
+}
+
+// counter
+
+const item_control = document.querySelectorAll('.item__control')
+
+item_control.forEach(e => {
+	let counterField = e.querySelector('.field')
+	let counterMinusElem = e.querySelector('.minus')
+	let counterPlusElem = e.querySelector('.plus')
+
+	let count = 0
+
+	updateDisplay();
+
+	counterPlusElem.addEventListener("click",()=>{
+		count++
+		updateDisplay()
+	}) ;
+
+	counterMinusElem.addEventListener("click",()=>{
+		// if(counterField.value != 1) count--
+
+		count = parseInt(counterField.value) - 1;
+
+		count = count < 1 ? 1 : count;
+		counterField.value = count;
+		
+		updateDisplay()
+	});
+
+	counterField.addEventListener('input', function(event) {
+
+		let testText = this.value
+
+		if(testText*1 + 0 != counterField.value) {
+			counterField.value = testText.substring(0, testText.length - 1)
+		}
+			
+
+		if(parseInt(testText) < 1 || testText == '') counterField.value = 1
+
+		updateDisplay()
+	})
+
+	function updateDisplay(){
+		counterField.value = count
+	}
+})
+
+
+// modals
+
+const modal_local = document.querySelector('#modal_change_locale')
+const modal_call = document.querySelector('#modal_call')
+
+const modal_close = document.querySelectorAll('.modal_close')
+
+const local_select_button = document.querySelectorAll('.locale_select')
+const call_modal_button = document.querySelectorAll('.modal_call_active')
+
+
+if(local_select_button) {
+	local_select_button.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			modal_local.classList.add('active')
+		})
+	})
+}
+
+if(call_modal_button) {
+	call_modal_button.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			modal_call.classList.add('active')
+		})
+	})
+}
+
+
+if(modal_close) {
+	modal_close.forEach(e => {
+		e.addEventListener('click', function(event) {
+			e.closest('.modal_content').classList.remove('active')
+		})
+	})
+}
+
+
+
+
 // sliders swiper
+
+
+const calc_step = document.querySelector('#calc_step')
+
+if(calc_step) {
+	const calc_step_init = new Swiper(calc_step, {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		onlyExternal: true,
+		noSwiping: true,
+		allowTouchMove: false,
+
+		pagination: {
+			el: "#calc_step_nav",
+			// type: 'custom',
+			clickable: false,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '"></span>'
+			}
+		},
+
+		navigation: {
+			nextEl: '#calc_step_page .right__page_next',
+			prevEl: '#calc_step_page .right__page_prev',
+		},
+
+		on: {
+			init: function() {
+				// console.log(this.realIndex + 1)
+				document.querySelector('.right__nav_text .current').innerHTML = this.realIndex + 1
+				document.querySelector('.right__nav_text .last').innerHTML = this.slides.length
+			},
+
+			activeIndexChange: function() {
+				document.querySelector('.right__nav_text .current').innerHTML = this.activeIndex + 1
+				// console.log(this.activeIndex)
+
+				if(this.realIndex + 1 > 1) {
+					document.querySelector('#calc_step_page .right__page_next').classList.add('button_orange')
+				} else {
+					document.querySelector('#calc_step_page .right__page_next').classList.remove('button_orange')
+				}
+
+				if(this.realIndex + 1 == this.slides.length) {
+					document.querySelector('#calc_step_page .right__page_prev span').innerHTML = 'назад к выбору материалов'
+					document.querySelector('.calc_wrapper__form .right__nav').classList.add('hide')
+					document.querySelector('.final_right_bg').classList.add('active')
+					document.querySelector('.calc_wrapper__form .left').classList.add('final')
+
+					document.querySelector('.calc_wrapper__form .left__title').innerHTML = 'Ваша кухня рассчитана'
+				} else {
+					document.querySelector('#calc_step_page .right__page_prev span').innerHTML = 'назад'
+					document.querySelector('.calc_wrapper__form .right__nav').classList.remove('hide')
+					document.querySelector('.final_right_bg').classList.remove('active')
+					document.querySelector('.calc_wrapper__form .left').classList.remove('final')
+
+					document.querySelector('.calc_wrapper__form .left__title').innerHTML = 'Хотите узнать цену будущей кухни?'
+				}
+			}
+			
+		}
+	})
+}
+
 
 const article_product_related_slider = document.querySelector('#article_product_related_slider')
 
