@@ -117,22 +117,26 @@ if(accordion_item) {
 // catalog filter
 
 const catalog_filter_item = document.querySelectorAll('.catalog__filter_item')
+const catalog_filter_button = document.querySelector('.catalog__filter__smart')
 
 if(catalog_filter_item) {
-	catalog_filter_item.forEach(item => {
+	catalog_filter_item.forEach((item, index) => {
 		const button = item.querySelector('.catalog__filter_item__button')
-		const selected_text = item.querySelector('.catalog__filter_item__button .right')
+		const selected_text = item.querySelector('.catalog__filter_item__button .right .text')
 		const drop_menu = item.querySelector('.catalog__filter_item__drop')
 		
 
 		button.addEventListener('click', function(event) {
 			event.preventDefault()
 
-			for (let i of item.parentNode.children) {
-				i.classList.remove('active')
-			}
+			const targetClass = this.parentNode.classList.contains('active')
+			
 
+			for (let i of item.parentNode.children) {
+				if(targetClass === false) i.classList.remove('active')
+			}
 			item.classList.toggle('active')
+			
 		})
 
 		if(drop_menu) {
@@ -153,6 +157,16 @@ if(catalog_filter_item) {
 			})
 		}
 		
+	})
+}
+
+if(catalog_filter_button) {
+	catalog_filter_button.addEventListener('click', function(event) {
+		event.preventDefault()
+
+		this.classList.toggle('hide')
+
+		document.querySelector('.catalog__filter').classList.toggle('active')
 	})
 }
 
@@ -223,6 +237,7 @@ item_control.forEach(e => {
 
 const modal_local = document.querySelector('#modal_change_locale')
 const modal_call = document.querySelector('#modal_call')
+const modal_message = document.querySelector('#modal_message')
 
 const modal_close = document.querySelectorAll('.modal_close')
 
@@ -259,8 +274,160 @@ if(modal_close) {
 	})
 }
 
+// footer tabs
+
+const footer_left_button = document.querySelector('.footer__tab_header')
+const footer_left_tab_wrap = document.querySelector('.footer__tab')
+
+const footer_right_button = document.querySelectorAll('.footer__right_list_tab')
 
 
+if(footer_left_button) {
+	footer_left_button.addEventListener('click', function(event) {
+		event.preventDefault()
+
+		footer_left_tab_wrap.classList.toggle('active')
+	})
+}
+
+if(footer_right_button) {
+	footer_right_button.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			e.closest('.footer__right_list').classList.toggle('active')
+		})
+	})
+}
+
+
+// smart nav
+
+const burger_menu = document.querySelector('.header__bottom_burger')
+const smart_menu = document.querySelector('.smart_menu')
+const smart_call_button = document.querySelector('.header__bottom_call')
+const smart_menu_close = document.querySelector('.smart_menu .close')
+// const smart_menu_locale = document.querySelector('.smart_menu .locale')
+const smart_menu_call = document.querySelector('.smart_menu .call')
+
+const smart_menu_wrap = document.querySelector('.smart_menu__wrap.menu_main')
+const smart_menu_nav_top = document.querySelectorAll('.smart_menu__nav .top button')
+const smart_menu_nav_bottom = document.querySelectorAll('.smart_menu__nav .bottom button')
+
+const smart_menu_sub_tt = document.querySelectorAll('.smart_menu__nav .sub-tt button')
+
+const active_sub_0 = document.querySelectorAll('.active-sub-0')
+const active_sub_1 = document.querySelectorAll('.active-sub-1')
+
+burger_menu.addEventListener('click', function(event) {
+	event.preventDefault()
+
+	smart_menu.classList.add('active')
+})
+
+smart_call_button.addEventListener('click', function(event) {
+	event.preventDefault()
+
+	modal_call.classList.add('active')
+
+})
+
+// smart_menu_locale.addEventListener('click', function(event) {
+// 	event.preventDefault()
+
+
+// })
+
+smart_menu_call.addEventListener('click', function(event) {
+	event.preventDefault()
+
+	modal_call.classList.add('active')
+})
+
+smart_menu_close.addEventListener('click', function(event) {
+	event.preventDefault()
+
+	smart_menu.classList.remove('active')
+})
+
+if(smart_menu_nav_bottom) {
+	smart_menu_nav_bottom.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			let data_submenu = e.getAttribute('data-submenu')
+
+			smart_menu_wrap.classList.add('hide')
+			document.querySelector(`.${data_submenu}`).classList.add('active')
+		})
+	})
+}
+
+if(smart_menu_nav_top) {
+	smart_menu_nav_top.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			let data_submenu = e.getAttribute('data-submenu')
+
+			smart_menu_wrap.classList.add('hide')
+			document.querySelector(`.${data_submenu}`).classList.add('active')
+		})
+	})
+}
+
+if(active_sub_0) {
+	active_sub_0.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			smart_menu_wrap.classList.remove('hide')
+			document.querySelector('.sub-1').classList.remove('active')
+			document.querySelector('.sub-2').classList.remove('active')
+			document.querySelector('.sub-3').classList.remove('active')
+		})
+	})
+}
+
+if(active_sub_1) {
+	active_sub_1.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			document.querySelector('.sub-3').classList.add('active')
+
+			document.querySelector('.sub-3-1').classList.remove('active')
+			document.querySelector('.sub-3-2').classList.remove('active')
+		})
+	})
+}
+
+if(smart_menu_sub_tt) {
+	smart_menu_sub_tt.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			let data_submenu = e.getAttribute('data-submenu')
+			
+			document.querySelector('.sub-3').classList.remove('active')
+			// smart_menu_wrap.classList.add('hide')
+			document.querySelector(`.${data_submenu}`).classList.add('active')
+		})
+	})
+}
+
+// modal message
+const modal_message_button = document.querySelectorAll('.modal_message')
+
+if(modal_message_button) {
+	modal_message_button.forEach(e => {
+		e.addEventListener('click', function(event) {
+			event.preventDefault()
+
+			modal_message.classList.add('active')
+		})
+	})
+}
 
 // sliders swiper
 
@@ -270,7 +437,8 @@ const calc_step = document.querySelector('#calc_step')
 if(calc_step) {
 	const calc_step_init = new Swiper(calc_step, {
 		slidesPerView: 1,
-		spaceBetween: 20,
+		spaceBetween: 0,
+		autoHeight: true,
 		onlyExternal: true,
 		noSwiping: true,
 		allowTouchMove: false,
@@ -336,8 +504,7 @@ if(article_product_related_slider) {
 		slidesPerView: 3,
 		slidesPerGroup: 3,
 		spaceBetween: 20,
-		centeredSlides: true,
-		centeredSlidesBounds: true,
+		
 
 		pagination: {
 			el: "#article_product_related_slider .swiper-page",
@@ -350,6 +517,25 @@ if(article_product_related_slider) {
 		navigation: {
 			nextEl: '#article_product_related_slider .swiper-next',
 			prevEl: '#article_product_related_slider .swiper-prev',
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 24,
+			},
+			1050: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+				centeredSlides: true,
+				centeredSlidesBounds: true,
+			}
 		}
 	})
 }
@@ -362,11 +548,11 @@ if(slider_price_wrap) {
 		spaceBetween: 20,
 
 		pagination: {
-		el: "#slider_price .swiper-page",
-		clickable: true,
-		renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + (index + 1) + "</span>";
-		},
+			el: "#slider_price .swiper-page",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + "</span>";
+			},
 		},
 
 		navigation: {
@@ -388,6 +574,98 @@ if(example_work_wrap) {
 		navigation: {
 			nextEl: '#example_work_navigation .section-navigation__next',
 			prevEl: '#example_work_navigation .section-navigation__prev',
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+				
+			},
+			1050: {
+				slidesPerView: 2,
+				spaceBetween: 65
+			}
+		}
+	})
+}
+
+const advantages_items = document.querySelector('.advantages__items')
+
+if(advantages_items) {
+	const advantages_items_init = new Swiper(advantages_items, {
+		// loop: true,
+		// slidesPerView: 5,
+		// spaceBetween: 60,
+		
+
+		navigation: {
+			nextEl: '.advantages__items .swiper-next',
+			prevEl: '.advantages__items .swiper-prev',
+		},
+		
+		breakpoints: {
+			0: {
+				slidesPerView: 1.3,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 2.7,
+				spaceBetween: 20,
+				
+			},
+			1050: {
+				slidesPerView: 5,
+				spaceBetween: 60,
+
+				onlyExternal: true,
+				noSwiping: true,
+				allowTouchMove: false,
+			}
+		}
+	})
+}
+
+const article_product_carts = document.querySelector('.article_product__carts .swiper')
+
+if(article_product_carts) {
+	const advantages_items_init = new Swiper(article_product_carts, {
+		// loop: true,
+		// slidesPerView: 5,
+		// spaceBetween: 60,
+		
+
+		navigation: {
+			nextEl: '.article_product__carts .swiper-next',
+			prevEl: '.article_product__carts .swiper-prev',
+		},
+		
+		breakpoints: {
+			0: {
+				slidesPerView: 1.3,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 2.6,
+				spaceBetween: 24,
+			},
+			1050: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+				
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 24,
+
+				onlyExternal: true,
+				noSwiping: true,
+				allowTouchMove: false,
+			}
 		}
 	})
 }
@@ -411,6 +689,22 @@ if(slider_review_wrap) {
 		navigation: {
 			nextEl: '.reviews__content .reviews__content_nav_next',
 			prevEl: '.reviews__content .reviews__content_nav_prev',
+		},
+		
+		breakpoints: {
+			0: {
+				slidesPerView: 1.3,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+				
+			},
+			1050: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			}
 		}
 	})
 }
@@ -442,6 +736,18 @@ if(article_product_slider_main) {
 		slidesPerView: 5,
 		freeMode: true,
 		watchSlidesProgress: true,
+
+		breakpoints: {
+			0: {
+				slidesPerView: 3,
+				spaceBetween: 12,
+			},
+			768: {
+				slidesPerView: 5,
+				spaceBetween: 12,
+				
+			}
+		}
 	})
 
 	const article_product_slider_thumbs_init = new Swiper(article_product_slider_main, {
@@ -454,6 +760,8 @@ if(article_product_slider_main) {
 		thumbs: {
 			swiper: article_product_slider_main_init,
 		},
+
+		
 	})
 }
 
@@ -466,6 +774,22 @@ if(article_full_slider_main) {
 		slidesPerView: 5,
 		freeMode: true,
 		watchSlidesProgress: true,
+
+		breakpoints: {
+			0: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			768: {
+				slidesPerView: 5,
+				spaceBetween: 12
+				
+			},
+			1050: {
+				slidesPerView: 5,
+				spaceBetween: 12
+			}
+		}
 	})
 
 	const article_full_slider_thumbs_init = new Swiper(article_full_slider_main, {
@@ -490,6 +814,22 @@ if(article_related) {
 		navigation: {
 			nextEl: article_related.querySelector('.page_next'),
 			prevEl: article_related.querySelector('.page_prev'),
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+				
+			},
+			1050: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			}
 		}
 	})
 }
