@@ -1670,6 +1670,8 @@ body {
 .header__bottom_logo {
   margin-top: 1.875rem;
   margin-bottom: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1050px) {
