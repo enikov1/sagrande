@@ -438,7 +438,7 @@ if(calc_step) {
 	const calc_step_init = new Swiper(calc_step, {
 		slidesPerView: 1,
 		spaceBetween: 0,
-		autoHeight: true,
+		
 		onlyExternal: true,
 		noSwiping: true,
 		allowTouchMove: false,
@@ -455,6 +455,15 @@ if(calc_step) {
 		navigation: {
 			nextEl: '#calc_step_page .right__page_next',
 			prevEl: '#calc_step_page .right__page_prev',
+		},
+
+		breakpoints: {
+			0: {
+				autoHeight: true,
+			},
+			768: {
+				autoHeight: false,
+			},
 		},
 
 		on: {
