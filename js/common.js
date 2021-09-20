@@ -16,7 +16,20 @@ if(drop_menu_item) {
 
 			e.classList.toggle('active')
 		})
+
+		document.addEventListener('click', function(event) {
+			const target = event.target;
+			const its_menu = target == e || e.contains(target);
+			const its_btnMenu = target == btn;
+			const menu_is_active = e.classList.contains('active');
+			
+			if (!its_menu && !its_btnMenu && menu_is_active) {
+				e.classList.remove('active')
+			}
+		});
 	})
+
+	
 }
 
 // drop menu tabs
@@ -24,6 +37,7 @@ if(drop_menu_item) {
 const header_nav_drop = document.querySelector('.header__nav_drop')
 
 const drop_menu_tabs_link = document.querySelectorAll('.header__drop_wrapper__button')
+const drop_menu_wrap = document.querySelector('.header__drop_wrapper')
 const drop_menu_tabs_wrap = document.querySelectorAll('.bottom__tab')
 
 if(drop_menu_tabs_link) {
@@ -33,8 +47,20 @@ if(drop_menu_tabs_link) {
 
 		this.classList.toggle('active')
 
-		document.querySelector('.header__drop_wrapper').classList.toggle('active')
+		drop_menu_wrap.classList.toggle('active')
 	})
+
+	document.addEventListener('click', function(event) {
+		const target = event.target;
+		const its_menu = target == drop_menu_wrap || drop_menu_wrap.contains(target);
+		const its_btnMenu = target == header_nav_drop;
+		const menu_is_active = drop_menu_wrap.classList.contains('active');
+			
+		if (!its_menu && !its_btnMenu && menu_is_active) {
+			drop_menu_wrap.classList.remove('active')
+			header_nav_drop.classList.remove('active')
+		}
+	});
 
 	drop_menu_tabs_link.forEach((e, i) => {
 		e.addEventListener('click', function(event) {
@@ -54,6 +80,8 @@ if(drop_menu_tabs_link) {
 			}
 			drop_menu_tabs_wrap[i].classList.add('active')
 		})
+
+		
 	})
 }
 
@@ -128,6 +156,7 @@ if(catalog_filter_item) {
 
 		button.addEventListener('click', function(event) {
 			event.preventDefault()
+			event.stopPropagation()
 
 			const targetClass = this.parentNode.classList.contains('active')
 			
@@ -138,6 +167,17 @@ if(catalog_filter_item) {
 			item.classList.toggle('active')
 			
 		})
+
+		document.addEventListener('click', function(event) {
+			const target = event.target;
+			const its_menu = target == drop_menu || drop_menu.contains(target);
+			const its_btnMenu = target == button;
+			const menu_is_active = drop_menu.parentNode.classList.contains('active');
+				
+			if (!its_menu && !its_btnMenu && menu_is_active) {
+				item.classList.remove('active')
+			}
+		});
 
 		if(drop_menu) {
 			const drop_menu_button = drop_menu.querySelectorAll('button')
@@ -234,7 +274,7 @@ item_control.forEach(e => {
 
 
 // modals
-
+const modal_wrap = document.querySelectorAll('.modal_content')
 const modal_local = document.querySelector('#modal_change_locale')
 const modal_call = document.querySelector('#modal_call')
 const modal_message = document.querySelector('#modal_message')
@@ -249,8 +289,16 @@ if(local_select_button) {
 	local_select_button.forEach(e => {
 		e.addEventListener('click', function(event) {
 			event.preventDefault()
+			event.stopPropagation()
 
 			modal_local.classList.add('active')
+		})
+	})
+
+	fetch('data.json').then(data => {
+		data.json().then(json => {
+			let countries = json.countries
+			Autocomplete('#search_city', countries)
 		})
 	})
 }
@@ -259,6 +307,7 @@ if(call_modal_button) {
 	call_modal_button.forEach(e => {
 		e.addEventListener('click', function(event) {
 			event.preventDefault()
+			event.stopPropagation()
 
 			modal_call.classList.add('active')
 		})
@@ -273,6 +322,32 @@ if(modal_close) {
 		})
 	})
 }
+
+if(modal_wrap) {
+	modal_wrap.forEach(e => {
+		
+		
+			document.addEventListener('click', function(event) {
+				if(e.classList.contains('active')) {
+					const target = event.target;
+					const its_menu = target == e.querySelector('.modal_content__wrap') || e.querySelector('.modal_content__wrap').contains(target);
+					// const its_btnMenu = target == document.querySelector('.js--modal-button');
+					const menu_is_active = e.classList.contains('active');
+					if (!its_menu && menu_is_active) {
+						e.classList.remove('active')
+						console.log(1)
+					}
+
+					
+				}
+			});
+		
+
+		
+	})
+}
+
+
 
 // footer tabs
 
@@ -854,13 +929,16 @@ const goToScroll = () => {
 
 // mask inputs
 
-const phone = document.querySelector('.mask--phone');
+const phone = document.querySelectorAll('.mask--phone');
 
 if(phone) {
-	let phoneMask = IMask(
-	phone, {
-		mask: '+{7} {9}00 000 00 00',
-		placeholderChar: '.',
-		lazy: false,
-	});
+	phone.forEach(e => {
+		let phoneMask = IMask(
+		e, {
+			mask: '+{7} {9}00 000 00 00',
+			placeholderChar: '.',
+			lazy: false,
+		});
+	})
+	
 }
